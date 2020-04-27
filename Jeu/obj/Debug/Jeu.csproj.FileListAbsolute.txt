@@ -1,0 +1,9 @@
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\obj\Debug\Jeu.csprojAssemblyReference.cache
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\obj\Debug\Jeu.Form1.resources
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\obj\Debug\Jeu.Properties.Resources.resources
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\obj\Debug\Jeu.csproj.GenerateResource.cache
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\bin\Debug\Jeu.exe.config
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\bin\Debug\Jeu.exe
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\bin\Debug\Jeu.pdb
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\obj\Debug\Jeu.exe
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\obj\Debug\Jeu.pdb

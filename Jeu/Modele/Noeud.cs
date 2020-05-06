@@ -8,11 +8,11 @@ namespace Jeu.Modele
 {
     public class Noeud
     {
-        public object Valeur { get; set; }
+        public Carte Valeur { get; set; }
         public Noeud FilsGauche { get; set; }
         public Noeud FilsDroit { get; set; }
 
-        public Noeud(object v)
+        public Noeud(Carte v)
         {
             if (v == null)
                 throw new Exception("Impossible de passer une valeur nulle");

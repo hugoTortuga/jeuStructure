@@ -49,45 +49,36 @@ namespace Jeu
             }
         }
 
-        public int JoueurJoue()
+        public Carte JoueurJoue()
         {
-            Carte c = Joueur.JouerProchaineCarte();
-            PliEnCours.AjouterCarteDessus(c);
-
-            switch (c.Valeur)
+            Carte c = null;
+            try
             {
-                case 11:
-                    return 1;
-                case 12:
-                    return 2;
-                case 13:
-                    return 3;
-                case 14:
-                    return 4;
-                default:
-                    return 1;
+                c = Joueur.JouerProchaineCarte();
+                PliEnCours.AjouterCarteDessus(c);
             }
+            catch(MainVideException ex)
+            {
+                throw ex;
+            }
+
+            return c;
 
         }
 
-        public int OrdiJoue()
+        public Carte OrdiJoue()
         {
-            Carte c = Ordi.JouerProchaineCarte();
-            PliEnCours.AjouterCarteDessus(c);
-
-            switch (c.Valeur)
+            Carte c = null;
+            try
             {
-                case 11:
-                    return 1;
-                case 12:
-                    return 2;
-                case 13:
-                    return 3;
-                case 14:
-                    return 4;
-                default:
-                    return 1;
+                c = Ordi.JouerProchaineCarte();
+                PliEnCours.AjouterCarteDessus(c);
             }
+            catch (MainVideException ex)
+            {
+                throw ex;
+            }
+            return c;
         }
         
         public static void Start()

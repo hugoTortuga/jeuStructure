@@ -18,6 +18,16 @@ namespace Jeu
             Taille = -1;
         }
 
+        public bool TestPerdu()
+        {
+            if (Taille == -1)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
         public void AjouterCarte(Carte c)
         {
             if (c == null)
@@ -33,6 +43,25 @@ namespace Jeu
             
         }
 
+        public void AjouterCarteSous(Carte c)
+        {
+            if (c == null)
+                throw new Exception("Carte nulle");
+
+            if (Taille + 1 < 52)
+            {
+                Taille++;
+                for(int i = 0; i < Taille-1; i++)
+                {
+                    Cartes[i + 1] = Cartes[i];
+                }
+                Cartes[0] = c;
+            }
+            else
+                throw new Exception("Vous essayez d'ajouter plus de 52 cartes dans une main, impossible");
+        }
+
+
         public Carte RetirerCarte()
         {
             if (Taille == -1)
@@ -45,6 +74,8 @@ namespace Jeu
             Taille--;
             return c;
         }
+
+        
 
         public void Afficher()
         {

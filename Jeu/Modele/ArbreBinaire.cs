@@ -23,16 +23,16 @@ namespace Jeu.Modele
                 return false;
         }
 
-        public void Ajouter(int v)
+        public void Ajouter(Carte v)
         {
             if (Racine == null)
                 Racine = new Noeud(v);
             else
                 AjouterNoeud(Racine, v);
         }
-        public void AjouterNoeud(Noeud r, int v)
+        public void AjouterNoeud(Noeud r, Carte v)
         {
-            if (r.Valeur >= v)
+            if (r.Valeur.Valeur >= v.Valeur)
             {
                 if (r.FilsGauche == null)
                     r.FilsGauche = new Noeud(v);

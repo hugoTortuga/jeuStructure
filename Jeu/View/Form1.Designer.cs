@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Media;
 
 namespace Jeu
 {
@@ -47,13 +48,14 @@ namespace Jeu
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(907, 610);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(237, 77);
             this.button1.TabIndex = 0;
             this.button1.Text = "Jouer prochaine carte";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Bouton_JouerCarte);
             // 
             // pictureBox1
@@ -127,7 +129,7 @@ namespace Jeu
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(621, 341);
+            this.label4.Location = new System.Drawing.Point(619, 366);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 14);
             this.label4.TabIndex = 8;
@@ -137,7 +139,8 @@ namespace Jeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1635, 766);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1569, 788);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -171,21 +174,31 @@ namespace Jeu
 
         public void InitialiserImagesLabel()
         {
-            this.pictureBox1.Image = Image.FromFile("../../images/face.png");
-            this.pictureBox2.Image = Image.FromFile("../../images/face.png");
-            this.pictureBox4.Image = Image.FromFile("../../images/face.png");
+            this.pictureBox1.Image = Image.FromFile("../../assets/face.png");
+            this.pictureBox2.Image = Image.FromFile("../../assets/face.png");
+            this.pictureBox4.Image = Image.FromFile("../../assets/face.png");
 
             this.label1.Text = "Bienvenue";
-            this.label2.Text = "";
-            this.label3.Text = "";
-            this.label4.Text = "";
+            this.label3.Text = "Cartes de l'ordi :";
+            this.label2.Text = "Vos cartes :";
+            this.label4.Text = "Pli :";
 
         }
 
         public void SetImageCenter(string url)
         {
-            string chemin = "../../images/" + url;
-            pictureBox4.Image = Image.FromFile(chemin);
+            if (string.IsNullOrEmpty(url))
+                pictureBox4.Image = null;
+
+            else
+            {
+                string chemin = "../../assets/" + url;
+                pictureBox4.Image = Image.FromFile(chemin);
+            }
+            /*MediaPlayer player = new MediaPlayer();
+            player.Open(new System.Uri(("../../assets/draw.wav")));
+            player.Volume = 0.5f;
+            player.Play();*/
             Update();
         }
 
@@ -197,9 +210,9 @@ namespace Jeu
 
         public void SetTaillePaquet(int joueur, int ordi, int pli)
         {
-            label2.Text = (joueur+1) + " cartes";
-            label3.Text = (ordi+1) + " cartes";
-            label4.Text = (pli+1) + " cartes";
+            label2.Text = (joueur + 1) + " cartes";
+            label3.Text = (ordi + 1) + " cartes";
+            label4.Text = (pli + 1) + " cartes";
             Update();
         }
 

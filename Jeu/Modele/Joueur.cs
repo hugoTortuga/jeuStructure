@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jeu.Modele;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,9 @@ namespace Jeu
 
         public Carte JouerProchaineCarte()
         {
+            if (MainJoueur.TestPerdu())
+                throw new MainVideException("Main vide");
+
             Carte c = MainJoueur.RetirerCarte();
             return c;
         }
@@ -33,7 +37,17 @@ namespace Jeu
         {
             foreach (var c in cs)
             {
-                MainJoueur.AjouterCarte(c);
+                if(c != null)
+                    MainJoueur.AjouterCarte(c);
+            }
+        }
+
+        public void AjouterSousMain(Carte[] cs)
+        {
+            foreach (var c in cs)
+            {
+                if (c != null)
+                    MainJoueur.AjouterCarteSous(c);
             }
         }
 

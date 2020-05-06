@@ -7,3 +7,6 @@ D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\bin\Debug\Jeu.exe
 D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\bin\Debug\Jeu.pdb
 D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\obj\Debug\Jeu.exe
 D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\obj\Debug\Jeu.pdb
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\obj\Debug\Jeu.Menu.resources
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\obj\Debug\Jeu.Regles.resources
+D:\Fichiers\Cours\Structure\Projet\Jeu\Jeu\Jeu\obj\Debug\Jeu.GameOver.resources

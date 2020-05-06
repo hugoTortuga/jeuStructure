@@ -22,6 +22,12 @@ namespace Jeu.Modele
         #region Methodes
 
 
+        public void Vider()
+        {
+            Taille = -1;
+            Cartes = new Carte[52];
+        }
+
         public void Afficher()
         {
             for (int i = Taille; i >= 0; i--)

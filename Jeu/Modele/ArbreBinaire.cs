@@ -48,6 +48,66 @@ namespace Jeu.Modele
             }
         }
 
+        public int Hauteur()
+        {
+            return HauteurNoeud(Racine);
+        }
+
+        public int HauteurNoeud(Noeud n)
+        {
+            if (n == null)
+                return 0;
+            else
+                return 1 +
+                Math.Max(HauteurNoeud(n.FilsGauche),
+                HauteurNoeud(n.FilsDroit));
+        }
+        public int Taille()
+        {
+            return TailleNoeud(Racine);
+        }
+
+        public int TailleNoeud(Noeud n)
+        {
+            if (n == null)
+                return 0;
+            else
+                return 1 + TailleNoeud(n.FilsGauche) + TailleNoeud(n.FilsDroit);
+        }
+
+        public int Minimum()
+        {
+            if (Racine == null)
+                return -1;
+            else
+                return MinimumNoeud(Racine);
+        }
+
+        public int MinimumNoeud(Noeud n)
+        {
+            if (n.FilsGauche != null)
+                return MinimumNoeud(n.FilsGauche);
+            else
+                return n.Valeur.Valeur;
+        }
+
+        public int Maximum()
+        {
+            if (Racine == null)
+                return -1;
+            else
+                return MaximumNoeud(Racine);
+        }
+
+        public int MaximumNoeud(Noeud n)
+        {
+            if (n.FilsDroit != null)
+                return MaximumNoeud(n.FilsDroit);
+            else
+                return n.Valeur.Valeur;
+        }
+
+
 
     }
 }

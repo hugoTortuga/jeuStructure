@@ -14,7 +14,6 @@ namespace Jeu
         [STAThread]
         static void Main()
         {
-            Partie.Start();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Menu());

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Jeu.Modele
 {
+
+    //représente un noeud dans l'arbre, contient une carte et des fils
     public class Noeud
     {
         public Carte Valeur { get; set; }

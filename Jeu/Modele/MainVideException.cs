@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Jeu.Modele
 {
+
+    //Exception lancée lorqu'un des 2 joueurs n'a plus de cartes en main
     public class MainVideException : Exception
     {
 

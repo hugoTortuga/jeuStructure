@@ -30,7 +30,6 @@ namespace Jeu
             nbCarteAJouerAvantPerte = 100000;
         }
 
-
         private void RemporterPli(bool joueur)
         {
             Thread.Sleep(1000);

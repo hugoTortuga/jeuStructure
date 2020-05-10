@@ -110,6 +110,7 @@ namespace Jeu.Modele
 
         }
 
+        //Méthode de mélange du paquet initial garanti 100% sans arraylist ou autre liste de java, que du tableau
         public void Melange(Carte[] cartesNonMelanges)
         {
             var Randomizer = new Random();

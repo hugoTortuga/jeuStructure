@@ -19,9 +19,12 @@ namespace Jeu
 
         public Partie()
         {
+            //On initialise 2 joueurs
             Ordi = new Joueur("Ordi");
+            Ordi.Memoire = new ArbreBinaire();
             Joueur = new Joueur("Joueur1");
 
+            //On initialise le paquet
             PaquetInitial = new Paquet();
             PaquetInitial.InitialiserPaquet();
 
@@ -29,7 +32,7 @@ namespace Jeu
             FirstPlayer = true;
         }
 
-        //Distribue 26 cartes dans la main de l'ordi et 26 cartes dans la main du joueur
+        //Distribue 26 cartes dans la main de l'ordi et 26 cartes dans la main du joueur en alternant
         public void DistribuerCartes()
         {
             bool interupteur = false;
@@ -54,8 +57,11 @@ namespace Jeu
             Carte c = null;
             try
             {
+                //Tire une carte et l'ajoute dans le pli
                 c = Joueur.JouerProchaineCarte();
                 PliEnCours.AjouterCarteDessus(c);
+                //On ajoute la carte jouée à la mémoire de l'ordi
+                Ordi.Memoire.Ajouter(c);
             }
             catch(MainVideException ex)
             {
@@ -71,21 +77,18 @@ namespace Jeu
             Carte c = null;
             try
             {
+                //Tire une carte et l'ajoute dans le pli
                 c = Ordi.JouerProchaineCarte();
                 PliEnCours.AjouterCarteDessus(c);
+                //On ajoute la carte jouée à la mémoire de l'ordi
+                Ordi.Memoire.Ajouter(c);
+
             }
             catch (MainVideException ex)
             {
                 throw ex;
             }
             return c;
-        }
-        
-        public static void Start()
-        {
-            
-
-
         }
 
     }

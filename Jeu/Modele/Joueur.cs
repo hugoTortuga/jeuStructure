@@ -10,6 +10,7 @@ namespace Jeu
     public class Joueur
     {
 
+        public ArbreBinaire Memoire { get; set; }
         public string Pseudo { get; set; }
         public Main MainJoueur { get; set; }
 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Jeu
 {
+    //représente la main d'un joueur
     public class Main
     {
 

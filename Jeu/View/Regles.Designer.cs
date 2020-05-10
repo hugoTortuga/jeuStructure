@@ -77,6 +77,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.Enabled = false;
             this.Name = "Regles";
             this.Text = "Regles";
             this.ResumeLayout(false);
